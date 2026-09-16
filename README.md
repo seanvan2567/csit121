@@ -1,2 +1,2 @@
-# CSIT121
-Coursework for CSIT121
+# csit121
+Coursework for csit121
