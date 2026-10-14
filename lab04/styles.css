@@ -1,0 +1,40 @@
+
+a {
+    color:rgb(0, 255, 13)
+}
+
+a:hover {
+  color: hotpink;
+}
+
+.current {
+font-weight: bold;
+color:rgb(0, 251, 255);
+}
+
+body {
+    background-color:rgb(149, 149, 149);
+    font-size: 16px;
+}
+
+header {
+background-image: url('images/basketballbanner.png');
+background-repeat: no-repeat;
+background-size: cover;
+padding: 8px;
+}
+
+img {
+  
+  max-width: 60%; 
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+    -webkit-text-stroke: 1px rgb(0, 255, 13);
+    font-size:40px;
+    letter-spacing: 1.5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
