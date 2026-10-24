@@ -12,8 +12,7 @@ a {
     color: rgb(154, 116, 21)
 }
 img {
-    width: 90%;
-    max-height: 600px;
+    max-width: 70%;
     height: auto;
     display: block;
     margin: auto;
