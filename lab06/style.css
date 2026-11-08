@@ -1,0 +1,93 @@
+body {
+    background-color: #A7C957;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2f5436;
+}
+
+a {
+    color: #BC4749;
+}
+
+h1 {
+    color: #7f1315;
+    margin: 0 0 10px 0;
+}
+
+#main-header {
+    text-align: center;
+    background-color: rgb(198, 242, 123);
+    padding: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 12px;
+    background-color: #A7C957;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.nav a:hover {
+    background-color: #92b545;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.mid-header {
+    text-align: center;
+    background-color: rgb(198, 242, 123);
+    padding: 10px;
+    margin: 0;
+}
+
+.blog-post {
+    padding: 15px;
+}
+
+.blog-post p, .blog-post li {
+    font-size: large;
+    color: #2f5436;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(198, 242, 123);
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .posts-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
