@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="main-header"> 
+        <h1> Lab 07 Table and Form Lab </h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="tierlist.html">The Office Characters Tier List</a> </li>
+                <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="myform" method="post">
+        <fieldset>
+            <legend>The Office Tier List Feedback</legend> <br>
+            
+            <div class="form-text">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-text">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-text">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Share any thoughts you have about the ranking..."></textarea>
+            </div>
+
+            <div class="form-question">
+                <label for="accountants">Who would you rank highest in accounting?</label> 
+                <select id="accountants" name="accountants">
+                    <option value="" disabled selected>-- Select an option --</option>
+                    <option value="Angela">Angela</option>
+                    <option value="Kevin">Kevin</option>
+                    <option value="Oscar">Oscar</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label>Does Dwight deserve to be S tier with Michael?</label>
+                <div class="options-group">
+                    <label><input type="radio" name="dwightrank" value="yes"> Yes</label>
+                    <label><input type="radio" name="dwightrank" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="form-question">
+                <label> Do you agree Pam should be ranked higher than Jim? </label>
+                <div class="options-group">
+                    <label><input type="checkbox" id="pamrank" name="pamrank"> I agree </label>
+                </div>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+            <input type="reset">
+        </fieldset>
+    </form>
+
+    <script>
+        document.getElementById('myform').addEventListener('submit', function(event) {
+            event.preventDefault(); //stop the browser from submitting the form because this script is handling it. 
+
+            //all the following code get the info from the form and puts it in a constant
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const accountants = document.getElementById('accountants').value;
+            const dwightrank = document.querySelector('input[name="dwightrank"]:checked').value;
+            const pamrank = document.getElementById('pamrank').checked ? 'yes' : 'no';
+            const comments = document.getElementById('comments').value;
+
+            //put all the form info into a one long string
+            const data = `Name: ${name}\nEmail: ${email}\nFavorite Accountant: ${accountants}\nDwight Over Michael: ${dwightrank}\nPam Over Jim: ${pamrank}\nComments: ${comments}`;
+            
+            //The remaining code is used to create and download a text file from the browser - see comments after each line
+            const blob = new Blob([data], { type: 'text/plain' }); //create a blob object and put all the data in it
+            const url = URL.createObjectURL(blob); //create a temp URL to reference the blob
+            const a = document.createElement('a'); //dynamically create an anchor tag
+            a.href = url; //use the blog URL you generated for the dynamically created anchor tag
+            a.download = 'form-data-from-' + name + '.txt'; //create the file name that will be used
+            a.click(); //simulate the clicking of the anchor tag your created 
+            URL.revokeObjectURL(url); //dump the temporary URL - it's no longer needed. 
+        });
+    </script>
+
+</body>
+</html>

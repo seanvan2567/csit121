@@ -1,0 +1,127 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+body {
+    background-color: rgb(220, 194, 161);
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 12px;
+    background-color: #555555;
+    border-radius: 4px;
+    display: inline-block;
+    color:rgb(255, 136, 0)
+}
+
+thead {
+    font-weight: bold;
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.sTier {
+    background-color: rgb(255, 100, 100);
+}
+
+.aTier {
+    background-color: rgb(255, 169, 63);
+}
+
+.bTier {
+    background-color: rgb(255, 246, 79);
+}
+
+.cTier {
+    background-color: rgb(135, 255, 91);
+}
+
+.dTier {
+    background-color: rgb(119, 214, 255);
+}
+
+.fTier {
+    background-color: rgb(234, 129, 255);
+}
+
+caption {
+    margin-bottom: 10px;
+    color:white;
+}
+
+td:nth-child(1) {
+    font-weight: bold;
+}
+
+.table-container {
+    background-color: black;
+    margin: 40px auto;
+    padding: 10px;
+    width: fit-content;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#robcali {
+    width: 150px;
+}
+
+#nellie {
+    width: 150px;
+}
+
+form {
+    background-color:bisque;
+    padding: 10px;
+}
+
+.form-text, .form-question {
+    display: flex;             
+    align-items: flex-start;   
+    gap: 10px;                 
+    margin-bottom: 15px;
+}
+
+.form-text {
+    input, textarea {
+        width: calc(100% - 20px);
+        padding: 8px;
+        border: 1px solid black;
+    }
+}
+.options-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 10px;
+}
+
+
+
