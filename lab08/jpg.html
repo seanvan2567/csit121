@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG Example - Sports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<div id="main">
+    <header>
+        <h1>Image Types</h1>
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.html">Home</a>
+                    <a href="jpg.html">JPG</a>
+                    <a href="png.html">PNG</a>
+                    <a href="gif.html">GIF</a>
+
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu </span>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <h2>JPG Format Example</h2>
+        
+        <img src="images/2022jvfootball.jpg" 
+             alt="Parkville Highschool JV Football Team huddles up before a play">
+        
+        <section>
+            <h3>About This Image</h3>
+            <p>This image shows the Parkville Highschool football team huddling up before a play.
+                This picture was taken by me in 2022 when I was sidelined on the football team due to an ankle injury.
+            </p>
+        </section>
+        
+        <section>
+            <h3>Why JPG Format?</h3>
+            <p>JPG format works very well for this photo due to the wide range of colors
+                that JPG handles effortlessly as well as keeping the file size small.
+                 Theres also minimal compression that would be very noticeable on the trees in the background.
+            </p>
+        </section>
+       
+        <div>
+            <p>Image source: Original photo by Sean VanLeuven</p>
+            <p>Image source: <a href="https://sportsevents365.com/events/type/1002?q=cq,,1002&page=24" target="_blank">
+              SportsEvents365</a></p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Sean VanLeuven - CSIT 121</p>
+    </footer>
+
+</div>
+
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
